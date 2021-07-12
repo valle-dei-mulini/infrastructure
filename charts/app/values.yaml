@@ -5,14 +5,14 @@
 replicaCount: 1
 
 backend:
-  serviceName: "backend-service"
   image:
     tag: "ci-20bd931d6804edbd580bc0bfb0208a26b26e427d"
+  serviceName: "backend-service"
 
 frontend:
-  serviceName: "frontend-service"
   image:
     tag: "ci-c380473014f0ad3e04e142c960ebbe4a46e2bf96"
+  serviceName: "frontend-service"
 
 imagePullSecrets: []
 nameOverride: ""
