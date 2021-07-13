@@ -12,11 +12,13 @@ image:
 
 serviceName: ""
 
+frontendURL: http://frontend-service:3000
+
 weatherApiKey: 3815f2d2474d4bf0fd7527bd628f45cb # required to be set 
 
 postgresql:
-  postgresqlUsername: "" # required to be set
-  postgresqlPassword: "" # required to be set
+  postgresqlUsername: "valle" # required to be set
+  postgresqlPassword: "valle" # required to be set
   postgresqlDatabase: valledeimulini
 
 imagePullSecrets: []

@@ -36,7 +36,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: FRONTEND_URL
-              value: http://frontend-service:3000
+              value: {{ .Values.frontendURL }}
             - name: WEATHER_API_KEY
               valueFrom:
                 secretKeyRef:
