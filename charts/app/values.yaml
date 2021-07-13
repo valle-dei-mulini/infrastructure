@@ -11,7 +11,7 @@ backend:
 
 frontend:
   image:
-    tag: "ci-a0c6bdc8f12a2353fe3286e8bfe8afd3c74628c5"
+    tag: "ci-796154666a25eb50ebdf01e305562ffd74e1f994"
   serviceName: "frontend-service"
 
 imagePullSecrets: []
