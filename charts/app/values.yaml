@@ -8,11 +8,19 @@ backend:
   image:
     tag: "ci-31eb576ea48ebfcd5997f5ca464607da667c26cc"
   serviceName: "backend-service"
+  frontendURL: http://frontend-service:3000
+  service:
+    port: 5000
 
 frontend:
   image:
     tag: "ci-796154666a25eb50ebdf01e305562ffd74e1f994"
   serviceName: "frontend-service"
+  backendURL: http://backend-service:5000
+  service:
+    port: 3000
+  
+
 
 imagePullSecrets: []
 nameOverride: ""
