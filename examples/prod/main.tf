@@ -62,7 +62,7 @@ module "argocd" {
   owner        = var.argocd.owner
   repository   = var.argocd.repository
   cluster_name = module.kubernetes.cluster_name
-  path_prefix  = "environments/dev/"
+  path_prefix  = "examples/argocd-with-applications/"
 
   domains = local.domain
   ingress_annotations = {
