@@ -9,7 +9,6 @@
     "server": "https://kubernetes.default.svc"
   "project": "default"
   "source":
-    "chart": "app"
     "helm":
       "parameters":
       - "name": "backend.frontendURL"
@@ -28,7 +27,7 @@
         "value": "3000"
       - "name": "frontend.serviceName"
         "value": "frontend-service"
-    "path": "charts/"
+    "path": "charts/app"
     "repoURL": "https://github.com/valle-dei-mulini/infrastructure"
     "targetRevision": "HEAD"
   "syncPolicy":

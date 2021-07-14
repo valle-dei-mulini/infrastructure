@@ -52,8 +52,7 @@ locals {
 
   name       = "app"
   repository = "https://github.com/valle-dei-mulini/infrastructure"
-  path       = "charts/"
-  chart      = "app"
+  chart       = "charts/app"
   conf       = merge(local.conf_defaults, var.conf)
 
   conf_defaults = {
@@ -83,8 +82,7 @@ locals {
       "source" = {
         "repoURL"        = local.repository
         "targetRevision" = "HEAD"
-        "path"           = local.path
-        "chart"          = local.chart
+        "path"           = local.chart
         "helm" = {
           "parameters" = values({
             for key, value in local.conf :
