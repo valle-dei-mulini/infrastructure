@@ -126,6 +126,16 @@ module "nginx-ingress" {
   tags = local.tags
 }
 
+module "app" {
+  depends_on   = [module.argocd, module.nginx-ingress]
+  source       = "../../web-module/"
+  cluster_name = module.kubernetes.cluster_name
+  argocd       = module.argocd.state
+  domains      = local.domain
+
+  tags = local.tags
+}
+
 # module "alb-ingress" {
 #   depends_on        = [module.external_dns]
 #   source            = "github.com/provectus/sak-alb-controller"
