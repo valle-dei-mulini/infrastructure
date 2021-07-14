@@ -40,12 +40,6 @@ variable "namespace_name" {
   description = "A name of namespace for creating"
 }
 
-#pumped chart version
-variable "chart_version" {
-  type        = string
-  description = "A Helm Chart version"
-  default     = "0.1.0"
-}
 
 variable "tags" {
   type        = map(string)

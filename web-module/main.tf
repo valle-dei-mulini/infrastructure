@@ -23,7 +23,6 @@ resource "helm_release" "this" {
   name          = local.name
   repository    = local.repository
   chart         = local.chart
-  version       = local.version
   namespace     = local.namespace
   recreate_pods = true
   timeout       = 1200
@@ -54,7 +53,6 @@ locals {
   name       = "app"
   repository = "../charts"
   chart      = "app"
-  version    = var.chart_version
   conf       = merge(local.conf_defaults, var.conf)
 
   conf_defaults = {
@@ -83,7 +81,6 @@ locals {
       "project" = "default"
       "source" = {
         "repoURL"        = local.repository
-        "targetRevision" = local.version
         "chart"          = local.chart
         "helm" = {
           "parameters" = values({
