@@ -29,6 +29,7 @@
       - "name": "frontend.serviceName"
         "value": "frontend-service"
     "repoURL": "../charts"
+    "targetRevision": "HEAD"
   "syncPolicy":
     "automated":
       "prune": true

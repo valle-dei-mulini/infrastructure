@@ -81,6 +81,7 @@ locals {
       "project" = "default"
       "source" = {
         "repoURL"        = local.repository
+        "targetRevision" = "HEAD"
         "chart"          = local.chart
         "helm" = {
           "parameters" = values({
