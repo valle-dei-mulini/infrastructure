@@ -52,7 +52,7 @@ variable "domain_name" {
 variable "argocd" {
   default = {
     repository = "infrastructure"
-    branch     = "master"
+    branch     = "main"
     owner      = "valle-dei-mulini"
   }
   type        = map(string)
