@@ -28,7 +28,8 @@
         "value": "3000"
       - "name": "frontend.serviceName"
         "value": "frontend-service"
-    "repoURL": "../charts"
+    "path": "charts/"
+    "repoURL": "https://github.com/valle-dei-mulini/infrastructure"
     "targetRevision": "HEAD"
   "syncPolicy":
     "automated":

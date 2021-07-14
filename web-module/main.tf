@@ -51,7 +51,8 @@ locals {
   namespace      = coalescelist(var.namespace == "" && local.argocd_enabled > 0 ? [{ "metadata" = [{ "name" = var.namespace_name }] }] : kubernetes_namespace.this, [{ "metadata" = [{ "name" = var.namespace }] }])[0].metadata[0].name
 
   name       = "app"
-  repository = "../charts"
+  repository = "https://github.com/valle-dei-mulini/infrastructure"
+  path       = "charts/"
   chart      = "app"
   conf       = merge(local.conf_defaults, var.conf)
 
@@ -82,6 +83,7 @@ locals {
       "source" = {
         "repoURL"        = local.repository
         "targetRevision" = "HEAD"
+        "path"           = local.path
         "chart"          = local.chart
         "helm" = {
           "parameters" = values({
