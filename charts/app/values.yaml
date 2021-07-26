@@ -19,8 +19,10 @@ frontend:
   backendURL: http://backend-service:5000
   service:
     port: 3000
-  
-
+  ingress:
+    enabled: true
+    host: weather.com
+    path: /
 
 imagePullSecrets: []
 nameOverride: ""
@@ -53,7 +55,7 @@ service:
   port: 80
 
 ingress:
-  enabled: true
+  enabled: false
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"

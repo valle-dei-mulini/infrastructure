@@ -52,18 +52,22 @@ locals {
 
   name       = "app"
   repository = "https://github.com/valle-dei-mulini/infrastructure"
-  chart       = "charts/app"
+  chart      = "charts/app"
   conf       = merge(local.conf_defaults, var.conf)
 
   conf_defaults = {
-    "backend.image.tag"     = "ci-31eb576ea48ebfcd5997f5ca464607da667c26cc"
-    "backend.serviceName"   = "backend-service"
-    "backend.frontendURL"   = "http://frontend-service:3000"
-    "backend.service.port"  = 5000
-    "frontend.image.tag"    = "ci-796154666a25eb50ebdf01e305562ffd74e1f994"
-    "frontend.serviceName"  = "frontend-service"
-    "frontend.backendURL"   = "http://backend-service:5000"
-    "frontend.service.port" = 3000
+    "backend.image.tag"        = "ci-31eb576ea48ebfcd5997f5ca464607da667c26cc"
+    "backend.serviceName"      = "backend-service"
+    "backend.frontendURL"      = "http://frontend-service:3000"
+    "backend.service.port"     = 5000
+    "frontend.image.tag"       = "ci-796154666a25eb50ebdf01e305562ffd74e1f994"
+    "frontend.serviceName"     = "frontend-service"
+    "frontend.backendURL"      = "http://backend-service:5000"
+    "frontend.service.port"    = 3000
+    "frontend.service.type"    = "LoadBalancer"
+    "frontend.ingress.enabled" = true
+    "frontend.ingress.host"    = "weather.com"
+    "frontend.ingress.path"    = "/"
   }
 
   application = {
