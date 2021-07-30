@@ -66,7 +66,7 @@ locals {
     "frontend.service.port"    = 3000
     "frontend.service.type"    = "LoadBalancer"
     "frontend.ingress.enabled" = true
-    "frontend.ingress.host"    = "weather.com"
+    "frontend.ingress.host"    = "rufusnufus.sak.ninja"
     "frontend.ingress.path"    = "/"
   }
 

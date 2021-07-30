@@ -26,7 +26,7 @@
       - "name": "frontend.ingress.enabled"
         "value": "true"
       - "name": "frontend.ingress.host"
-        "value": "weather.com"
+        "value": "rufusnufus.sak.ninja"
       - "name": "frontend.ingress.path"
         "value": "/"
       - "name": "frontend.service.port"

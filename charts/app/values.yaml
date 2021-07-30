@@ -21,7 +21,7 @@ frontend:
     port: 3000
   ingress:
     enabled: true
-    host: weather.com
+    host: rufusnufus.sak.ninja
     path: /
 
 imagePullSecrets: []
