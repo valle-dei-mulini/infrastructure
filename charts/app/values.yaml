@@ -6,7 +6,7 @@ replicaCount: 1
 
 backend:
   image:
-    tag: "ci-7fd7b2b936657ab21dc607228fe6064a4a37e235"
+    tag: "ci-ed0276022f9bb23d58123a004c3fc638d1973dad"
   serviceName: "backend-service"
   frontendURL: http://frontend-service:3000
   service:
